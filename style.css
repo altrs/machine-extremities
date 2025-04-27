@@ -35,6 +35,10 @@
 	justify-content: center;
 }
 
+body{
+	margin: 0px;
+}
+
 h1{
 	font-size: 50px;
 	font-family: IBM_PS-55, auto;
@@ -250,7 +254,7 @@ p{
 	border: 1px dotted black;
 	margin: 30px 80px;
 	background-image: url("assets/navigator-background.png");
-	background-size: cover;
+	background-size: 100% 100%;
 }
 
 .backButton {
@@ -279,6 +283,47 @@ p{
 	letter-spacing: 7px;
 	height: 50px;
 }
+
+.navigatorButton{
+	position: relative;
+	border: 2px solid #232222;
+	margin: 20px;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.navigatorGif{
+	width: 90%;
+	height: 90%;
+	background-color: #232222;
+}
+
+#eyesNavigator{
+	left: 25%;
+	top: 10%;
+}
+
+#handsNavigator{
+	left: 82%;
+	top: -2%;
+}
+
+#heartNavigator{
+	left: 41.7%;
+	top: -5%;
+}
+
+#skinNavigator{
+	left: 14%;
+	top: 2%;
+}
+
+
+
 
 
 
