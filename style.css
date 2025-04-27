@@ -218,10 +218,67 @@ p{
 	height: 50px;
 }
 
+/*NAVIGATOR*/
 
+.navigator {
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+.outerBox1{
+	position: relative;
+	width: 65%;
+	height: 90%;
+	background-color: #232222;
+}
 
+.outerBox2{
+	width: 95%;
+	height: 80%;
+	margin: 40px 20px;
+	background-color: white;
+	border: 1px dotted #232222;
+}
 
+.outerBox3{
+	width: 80%;
+	height: 89%;
+	border: 1px dotted black;
+	margin: 30px 80px;
+	background-image: url("assets/navigator-background.png");
+	background-size: cover;
+}
+
+.backButton {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 160px;
+	height: 35px;
+	border: none;
+	background-color: #00ff2b;
+	font-family: "lores-21-serif", sans-serif;
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-align: left;
+	padding-left: 15px;
+	color: #0066ff;
+}
+
+.creditsButton{
+	width: 100%;
+	background-color: #0055ff;
+	border: 1px solid black;
+	font-family: "lores-21-serif", sans-serif;
+	color: white;
+	font-size: 25px;
+	letter-spacing: 7px;
+	height: 50px;
+}
 
 
 

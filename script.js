@@ -121,7 +121,7 @@ function showChart(){
 setTimeout(lineAppearing, 1000);
 
 function loadNewPage(){
-	window.location.href = 'navigator.html';
+	// window.location.href = 'navigator.html';
 }
 
 function showLoading(){
