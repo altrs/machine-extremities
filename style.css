@@ -227,15 +227,17 @@ p{
 .navigator {
 	width: 100vw;
 	height: 100vh;
-	border: 1px solid black;
-	display: flex;
+	display: none;
+	position: absolute;
+	top: 0px;
+	background-color: white;
 	justify-content: center;
 	align-items: center;
 }
 
 .outerBox1{
 	position: relative;
-	width: 65%;
+	width: 60%;
 	height: 90%;
 	background-color: #232222;
 }
@@ -249,10 +251,10 @@ p{
 }
 
 .outerBox3{
-	width: 80%;
+	width: 85%;
 	height: 89%;
 	border: 1px dotted black;
-	margin: 30px 80px;
+	margin: 30px 60px; /*changed*/
 	background-image: url("assets/navigator-background.png");
 	background-size: 100% 100%;
 }
@@ -299,7 +301,11 @@ p{
 .navigatorGif{
 	width: 90%;
 	height: 90%;
-	background-color: #232222;
+/*	background-color: ivory;*/
+}
+
+.navigatorGif img{
+	width: 100%;
 }
 
 #eyesNavigator{
@@ -307,9 +313,28 @@ p{
 	top: 10%;
 }
 
+#eyesNavigator img{
+	filter: sepia(100%);
+	filter: contrast(50%);
+	mix-blend-mode: hard-light;
+}
+
+#eyesNavigator img:hover{
+	filter: sepia(0%);
+}
+
 #handsNavigator{
 	left: 82%;
 	top: -2%;
+}
+
+#handsNavigator img{
+	mix-blend-mode: difference;
+	opacity: 70%;
+}
+
+#handsNavigator img:hover{
+	filter: invert(100%);
 }
 
 #heartNavigator{
@@ -317,9 +342,28 @@ p{
 	top: -5%;
 }
 
+#heartNavigator img{
+	mix-blend-mode: hard-light;
+	opacity: 70%;
+}
+
+#heartNavigator img:hover{
+	filter: invert(100%);
+	filter: hue-rotate(250deg);
+}
+
 #skinNavigator{
 	left: 14%;
 	top: 2%;
+}
+
+#skinNavigator img{
+	mix-blend-mode: difference;
+	filter: invert(100%);
+}
+
+#skinNavigator img:hover{
+	filter: invert(0%);
 }
 
 

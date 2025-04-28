@@ -1,0 +1,95 @@
+@import url("https://use.typekit.net/oku7jul.css");
+
+@font-face {
+  font-family: Phoenix_BIOS;
+  src: url("assets/fonts/Phoenix_BIOS.woff");
+}
+
+@font-face {
+  font-family: Phoenix_BIOS_2Y;
+  src: url("assets/fonts/Web437_IBM_CGA-2y.woff");
+}
+
+@font-face {
+  font-family: IBM_EGA;
+  src: url("assets/fonts/IBM_EGA_9x14.woff");
+}
+
+@font-face {
+  font-family: IBM_PS-55;
+  src: url("assets/fonts/IBM_PS-55_re.woff");
+}
+
+@font-face {
+  font-family: DOS-V;
+  src: url("assets/fonts/DOS-V_re_JPN24.woff");
+}
+
+body{
+	margin: 0px;
+	font-family: lores-21-serif;
+}
+
+.menu{
+	margin-bottom: 20px;
+}
+
+.essayBackButton {
+	margin: 5px;
+	width: 160px;
+	height: 35px;
+	border: none;
+	background-color: #232222;
+	font-family: "IBM_EGA", sans-serif;
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-align: left;
+	padding-left: 15px;
+	color: white;
+}
+
+.essayBackButton:hover {
+	color: #0066ff;
+	background-color: #00ff2b;
+}
+
+pre, code {
+  font-family: Phoenix_BIOS, monospace;
+  font-size: 8px;
+  text-align: center;
+  line-height: 12px;
+}
+
+.divider{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+.essayDiv{
+	width: 55%;
+	height: 100vh;
+	line-height: 20px
+/*	border: 1px solid black;*/
+}
+
+.essayDiv p{
+	padding: 50px;
+}
+
+.sideBySideText{
+	display: flex;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.sideBySideText p{
+	padding-bottom: 0px;
+}
+
+
+.assetsDiv{
+	width: 45%;
+	height: 100vh;
+/*	border: 1px solid black;*/
+}

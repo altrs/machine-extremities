@@ -7,6 +7,12 @@
 
 let characterTracker = 0;
 let currentText = "";
+let deletionSpeed = 7;
+let typingSpeed = 80;
+let lineAppearingSpeed = 500;
+let gifShowTime = 10000;
+let logicChainDisplayTime = 25000;
+let loadNavigatorTime = 5000;
 let boot = [
   "(C) Copyright Corporation 039951",
   "ROM Version 1.20, 64 Megabytes RAM, 2 CPUs",
@@ -52,12 +58,12 @@ function lineAppearing() {
       introDiv.style.fontFamily = 'lores-21-serif';	
       introDiv.style.fontSize = "17px";
       introBootDiv.innerHTML += line + "<br>";
-    }, index * 50); //500
+    }, index * lineAppearingSpeed); //500
   });
 
   setTimeout(() => {
     startTyping(intro1, showFirstGif);
-  }, boot.length * 500 + 1000);
+  }, boot.length * lineAppearingSpeed + 1000);
 }
 
 function startTyping(text, callback) {
@@ -65,7 +71,7 @@ function startTyping(text, callback) {
   characterTracker = 0;
   typeWriter(callback);
 
-  if(text == intro3){ setTimeout(() => showChart(), 5);} //25000
+  if(text == intro3){ setTimeout(() => showChart(), logicChainDisplayTime);} //25000
 }
 
 function typeWriter(callback) {
@@ -77,7 +83,7 @@ function typeWriter(callback) {
       document.getElementById("intro").innerHTML += char;
     }
     characterTracker++;
-    setTimeout(() => typeWriter(callback), 5); //80
+    setTimeout(() => typeWriter(callback), typingSpeed); //80
   } else {
     if (callback) callback();
   }
@@ -94,7 +100,7 @@ function showFirstGif() {
     deleteText(() => startTyping(intro2, () => {
       deleteText(() => startTyping(intro3));
     }));
-  }, 100); //10000
+  }, gifShowTime); //10000
 }
 
 function deleteText(callback) {
@@ -103,7 +109,7 @@ function deleteText(callback) {
 
   if (current.length > 0) {
     introDiv.innerHTML = current.slice(0, -1);
-    setTimeout(() => deleteText(callback), 3); //7
+    setTimeout(() => deleteText(callback), deletionSpeed); //7
   } else {
     if (callback) callback();
   }
@@ -118,22 +124,42 @@ function showChart(){
 	logicChart.style.padding = "15px";
 }
 
-setTimeout(lineAppearing, 1000);
+function loadNavigator(){
+	document.querySelector(".navigator").style.display = "flex";
+	document.getElementById("loading").style.display = "none";
+}
 
-function loadNewPage(){
-	// window.location.href = 'navigator.html';
+function backToHomePage(){
+	console.log("back button");
+	document.querySelector(".navigator").style.display = "none";
 }
 
 function showLoading(){
 	console.log("CLICKED!");
 	document.getElementById('loading').style.display = "block";
-	setTimeout(() => loadNewPage(), 5000);
+	setTimeout(() => loadNavigator(), 5000);
 }
 
+setTimeout(lineAppearing, 1000);
 
 
+document.addEventListener('mousedown', function(event) {
+  	deletionSpeed = 2;
+	typingSpeed = 3;
+	lineAppearingSpeed = 50;
+	gifShowTime = 100;
+	logicChainDisplayTime = 500;
+	loadNavigatorTime = 500;
+});
 
-
+document.addEventListener('mouseup', function(event) {
+  	deletionSpeed = 7;
+	typingSpeed = 80;
+	lineAppearingSpeed = 500;
+	gifShowTime = 10000;
+	logicChainDisplayTime = 25000;
+	loadNavigatorTime = 5000;
+});
 
 
 
