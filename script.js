@@ -144,20 +144,20 @@ setTimeout(lineAppearing, 1000);
 
 
 document.addEventListener('mousedown', function(event) {
-  	deletionSpeed = 2;
+  deletionSpeed = 2;
 	typingSpeed = 3;
 	lineAppearingSpeed = 50;
 	gifShowTime = 100;
-	logicChainDisplayTime = 500;
+	logicChainDisplayTime = 2500;
 	loadNavigatorTime = 500;
 });
 
 document.addEventListener('mouseup', function(event) {
-  	deletionSpeed = 7;
+  deletionSpeed = 7;
 	typingSpeed = 80;
 	lineAppearingSpeed = 500;
 	gifShowTime = 10000;
-	logicChainDisplayTime = 25000;
+	logicChainDisplayTime = 100;
 	loadNavigatorTime = 5000;
 });
 
