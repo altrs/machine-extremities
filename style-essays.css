@@ -30,6 +30,11 @@ body{
 	font-family: lores-21-serif;
 }
 
+img{
+	width: 550px;
+	border: 1px dashed black;
+}
+
 .menu{
 	margin-bottom: 20px;
 }
@@ -53,11 +58,21 @@ body{
 	background-color: #00ff2b;
 }
 
-pre, code {
+.eyeTitle{
   font-family: Phoenix_BIOS, monospace;
   font-size: 8px;
   text-align: center;
   line-height: 12px;
+}
+
+.handTitle{
+  text-align: center;
+  line-height: 15px
+}
+
+#handsTitleQuote{
+	font-size: 8px;
+	font-family: Phoenix_BIOS, monospace;
 }
 
 .divider{
@@ -93,3 +108,62 @@ pre, code {
 	height: 100vh;
 /*	border: 1px solid black;*/
 }
+
+#studiesDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: -20px;
+}
+
+.studies {
+	width: 360px;
+  position: relative;
+  margin-left: -290px; /* overlap horizontally */
+  transition: transform 0.1s linear, z-index 0s;
+  z-index: 1;
+}
+
+/* Position each image slightly lower */
+.studies:nth-child(1) {
+  top: 0;
+}
+
+.studies:nth-child(2) {
+  top: 100px;
+}
+
+.studies:nth-child(3) {
+  top: 200px;
+}
+
+/* Remove left margin for the first one */
+.studies:first-child {
+  margin-left: 0;
+}
+
+/* Hover effect: bring to front and enlarge */
+.studies:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+
+#artcilesDiv {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Shrink-wrap columns to content */
+  gap: 10px 8px; /* row gap, column gap */
+  justify-content: center; /* center the grid as a whole */
+  align-items: center;
+}
+
+.articles {
+  width: 260px;        /* your desired size */
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  padding: 10px;
+}
+
+
