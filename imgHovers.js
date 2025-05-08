@@ -23,20 +23,21 @@ images.forEach(img => {
     else if (img.id === 'articles') {
       highlightAllLetters("articlesQ", "#a5d1c8", "#8c663c");
     }
-    // else if (img.id === 'memories') {
-    //   highlightAllLetters("appleQ", "#c1ddf7", "#67356e");
-    // }
-    // else if (img.id === 'wires') {
-    //   highlightAllLetters("appleQ", "#c1ddf7", "#67356e");
-    // }
-    // else if (img.id === 'religion') {
-    //   highlightAllLetters("appleQ", "#c1ddf7", "#67356e");
-    // }
-    // else if (img.id === 'eyesChart') {
-    //   highlightAllLetters("appleQ", "#c1ddf7", "#67356e");
-    // }
-
-
+    else if (img.id === 'memories') {
+      highlightAllLetters("memoriesQ", "#beccc6", "#1b1a2b");
+    }
+    else if (img.id === 'wires') {
+      highlightAllLetters("wiresQ", "#b84132", "#ede7b4");
+    }
+    else if (img.id === 'religion') {
+      highlightAllLetters("religionQ", "#522659", "#e3d5b3");
+    }
+    else if (img.id === 'eyesChart') {
+      highlightAllLetters("eyesChartQ", "#c5eef0", "1a2f30");
+    }
+    else if (img.id === 'self-control') {
+      highlightAllLetters("self-controlQ", "#2a5459", "#c5dbcd");
+    }
 
   });
 

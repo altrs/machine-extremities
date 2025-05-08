@@ -24,29 +24,17 @@ let boot = [
   " "
 ];
 
-let intro1 = `A creature named machine sits,
-			thinking about all the ways it could create the universe.
-			Every hour of every day, 
-			Machine is writing its love letter to the universe.
+let intro1 = `I did think,
+              let's go about this slowly.
+              This is important. This should take
+              some really deep thought.
 
-			Everytime, it goes something like this ……`;
+              We should take small thoughtful steps.`;
 
-let intro2 = `After an eternity of attempts,
-			the creature pleads to the computer/universe.
-			The defeated machine cries,
-			‘Am I you yet?’
-			‘In utopia, I will be you.’`;
+let intro2 = `But, bless us, we didn't
 
-let intro3 = `My computer told me I am a machine.
-			My computer told me that the world is just bytes to be consumed
-			Well, if the goal is growth,
-			I should continue to eat.
 
-			This world is not a machine.
-			I am not a machine.
-			This house we exist in is a living organism.
-			And technology,
-			a feeble leash.`;
+              [Mary Oliver]`;
 
 function lineAppearing() {
   boot.forEach((line, index) => {
@@ -55,15 +43,19 @@ function lineAppearing() {
       const introDiv = document.getElementById("intro");
       introBootDiv.style.fontFamily = 'lores-21-serif';
       introBootDiv.style.fontSize = "17px";
-      introDiv.style.fontFamily = 'lores-21-serif';	
+      introDiv.style.fontFamily = 'lores-21-serif'; 
       introDiv.style.fontSize = "17px";
       introBootDiv.innerHTML += line + "<br>";
-    }, index * lineAppearingSpeed); //500
+    }, index * lineAppearingSpeed);
   });
 
   setTimeout(() => {
-    startTyping(intro1, showFirstGif);
-  }, boot.length * lineAppearingSpeed + 1000);
+  startTyping(intro1, () => {
+    deleteText(() => {
+      startTyping(intro2, showChart); // after deletion, type intro2, then show logic chain
+    });
+  });
+}, boot.length * lineAppearingSpeed + 1000);
 }
 
 function startTyping(text, callback) {
@@ -71,7 +63,7 @@ function startTyping(text, callback) {
   characterTracker = 0;
   typeWriter(callback);
 
-  if(text == intro3){ setTimeout(() => showChart(), logicChainDisplayTime);} //25000
+  // Removed intro2 logic
 }
 
 function typeWriter(callback) {
@@ -89,27 +81,13 @@ function typeWriter(callback) {
   }
 }
 
-function showFirstGif() {
-  const gif = document.createElement("img");
-  gif.src = "assets/jargon.gif";
-  gif.style.display = "block";
-  gif.style.width = "250px";
-  document.getElementById("intro").appendChild(gif);
-
-  setTimeout(() => {
-    deleteText(() => startTyping(intro2, () => {
-      deleteText(() => startTyping(intro3));
-    }));
-  }, gifShowTime); //10000
-}
-
 function deleteText(callback) {
   const introDiv = document.getElementById("intro");
   let current = introDiv.innerHTML;
 
   if (current.length > 0) {
     introDiv.innerHTML = current.slice(0, -1);
-    setTimeout(() => deleteText(callback), deletionSpeed); //7
+    setTimeout(() => deleteText(callback), deletionSpeed);
   } else {
     if (callback) callback();
   }

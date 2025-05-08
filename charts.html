@@ -22,7 +22,7 @@
 		#charts {
 		  position: relative;
 		  width: 100%;
-		  height: 600px; /* or however tall your container should be */
+		  height: 600px;
 		}
 
 		.tab {
@@ -55,6 +55,7 @@
 			text-align: left;
 			padding-left: 15px;
 			color: white;
+			z-index: 999;
 		}
 
 	</style>
@@ -66,11 +67,16 @@
 	  </div>
 
 	<div id="charts">
-	  <img src="assets/charts/humility.png" class="tab" />
-	  <img src="assets/charts/cyborg.png" class="tab" />
-	  <img src="assets/charts/checklist.png" class="tab" />
-	  <img src="assets/charts/hitech.png" class="tab" />
-	  <img src="assets/charts/shame.png" class="tab" />
+	  <img src="assets/charts/new/humility.png" style="left: 50px;" class="tab" />
+	  <img src="assets/charts/new/cyborg.png" style="left: 50px; top: 600px" class="tab" />
+	  <img src="assets/charts/new/checklist.png" style="left:63vw; top: 60px" class="tab" />
+	  <img src="assets/charts/new/hitech.png" style="left: 500px; top: 900px;" class="tab" />
+	  <img src="assets/charts/new/shame.png" style="left: 630px; top: 30px" class="tab" />
+
+	  <img src="assets/eyes/eyes-chart.png" style="left: 100px; top: 300px" class="tab" />
+	  <img src="assets/hands/hands-chart.png" style="left: 500px; top: 70vh" class="tab" />
+	  <img src="assets/skin/skinchart.png" style="width: 300px; left: 1050px; top: 110vh" class="tab" />
+
 	</div>
 
 	<!-- NAVIGATOR -->
@@ -108,10 +114,6 @@
   let highestZ = 1;
 
   tabs.forEach(tab => {
-    // Random initial position (optional)
-    // tab.style.top = Math.random() * 300 + 'px';
-    // tab.style.left = Math.random() * 500 + 'px';
-
     tab.addEventListener('mousedown', startDrag);
     tab.addEventListener('click', () => {
       tab.style.zIndex = ++highestZ;
