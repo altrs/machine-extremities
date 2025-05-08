@@ -64,6 +64,8 @@
 						<div class="navigatorGif"><img src="assets/eyes.gif"/></div>
 					</div></a>
 
+					<img id="eyeC" style="position: absolute; display: none;z-index: 1000; width: 450px; left: -200px; border: 1px dotted black;" src="assets/eyes/eyes-chart.png">
+
 					<a href="hands.html"><div class="navigatorButton" id="handsNavigator">
 						<div class="navigatorGif"><img src="assets/hands.gif"/></div>
 					</div></a>
@@ -83,5 +85,11 @@
 
 	</div>
 	<script src="script.js"></script>
+	<script>
+		
+		document.getElementById("eyesNavigator").addEventListener('mouseenter', () => {document.getElementById("eyeC").style.display = "block";});
+		document.getElementById("eyesNavigator").addEventListener('mouseleave', () => {document.getElementById("eyeC").style.display = "none";});
+
+	</script>
 </body>
 </html>
