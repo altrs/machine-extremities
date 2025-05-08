@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MACHINE EXTREMITIES</title>
+	<link rel="stylesheet" href="style-essays.css">
+  <link rel="stylesheet" href="style.css">
+	<style>
+
+		@font-face {
+		  font-family: IBM_EGA;
+		  src: url("assets/fonts/IBM_EGA_9x14.woff");
+		}
+
+		img{
+			-webkit-user-drag: none;
+			  -khtml-user-drag: none;
+			  -moz-user-drag: none;
+			  -o-user-drag: none;
+			  user-drag: none;
+		}
+
+		#charts {
+		  position: relative;
+		  width: 100%;
+		  height: 600px; /* or however tall your container should be */
+		}
+
+		.tab {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 500px;
+		  height: auto;
+		  cursor: grab;
+		  transition: transform 0.2s ease;
+		}
+
+		.tab:hover {
+		  transform: scale(1.05);
+		}
+
+		.menu{
+			margin-bottom: 20px;
+		}
+
+		.essayBackButton {
+			margin: 5px;
+			width: 185px;
+			height: 35px;
+			border: none;
+			background-color: #232222;
+			font-family: "IBM_EGA", sans-serif;
+			font-size: 20px;
+			letter-spacing: 5px;
+			text-align: left;
+			padding-left: 15px;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="menu">
+	    <button class="essayBackButton" onClick="loadNavigator()">NAVIGATOR</button>
+	  </div>
+
+	<div id="charts">
+	  <img src="assets/charts/humility.png" class="tab" />
+	  <img src="assets/charts/cyborg.png" class="tab" />
+	  <img src="assets/charts/checklist.png" class="tab" />
+	  <img src="assets/charts/hitech.png" class="tab" />
+	  <img src="assets/charts/shame.png" class="tab" />
+	</div>
+
+	<!-- NAVIGATOR -->
+  <div class="navigator">
+      <div class="outerBox1">
+ 		<button class="backButton" onClick="hideNavigator()">BACK</button>
+ 		<a href="index.html"><button class="homepageButton">HOMEPAGE</button></a>
+        <div class="outerBox2">
+          <div class="outerBox3">
+
+            <a href="eyes.html"><div class="navigatorButton" id="eyesNavigator">
+              <div class="navigatorGif"><img src="assets/eyes.gif"/></div>
+            </div></a>
+
+            <a href="hands.html"><div class="navigatorButton" id="handsNavigator">
+              <div class="navigatorGif"><img src="assets/hands.gif"/></div>
+            </div></a>
+
+            <a href="charts.html"><div class="navigatorButton" id="heartNavigator">
+              <div class="navigatorGif"><img src="assets/chart.gif"/></div>
+            </div></a>
+
+            <a href="skin.html"><div class="navigatorButton" id="skinNavigator">
+              <div class="navigatorGif"><img src="assets/skin.gif"/></div>
+            </div></a>
+            
+          </div>
+        </div>
+        <button class="creditsButton">CREDITS</button>
+      </div>
+    </div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  let highestZ = 1;
+
+  tabs.forEach(tab => {
+    // Random initial position (optional)
+    // tab.style.top = Math.random() * 300 + 'px';
+    // tab.style.left = Math.random() * 500 + 'px';
+
+    tab.addEventListener('mousedown', startDrag);
+    tab.addEventListener('click', () => {
+      tab.style.zIndex = ++highestZ;
+    });
+  });
+
+  function startDrag(e) {
+    const tab = e.target;
+    tab.style.zIndex = ++highestZ;
+    let shiftX = e.clientX - tab.getBoundingClientRect().left;
+    let shiftY = e.clientY - tab.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+      tab.style.left = pageX - shiftX + 'px';
+      tab.style.top = pageY - shiftY + 'px';
+    }
+
+    function onMouseMove(e) {
+      moveAt(e.pageX, e.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    document.addEventListener('mouseup', () => {
+      document.removeEventListener('mousemove', onMouseMove);
+    }, { once: true });
+  }
+function backToHomePage(){
+	console.log("back button");
+	document.querySelector(".navigator").style.display = "none";
+}
+
+function loadNavigator(){
+	document.querySelector(".navigator").style.display = "flex";
+	document.getElementById("loading").style.display = "none";
+}
+
+function hideNavigator(){
+	document.querySelector(".navigator").style.display = "none";
+	document.getElementById("loading").style.display = "none";
+}
+
+</script>
+
+
+</body>
+</html>

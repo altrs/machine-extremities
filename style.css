@@ -233,6 +233,7 @@ p{
 	background-color: white;
 	justify-content: center;
 	align-items: center;
+	z-index: 999;
 }
 
 .outerBox1{
@@ -263,6 +264,22 @@ p{
 	position: absolute;
 	top: 2px;
 	left: 2px;
+	width: 160px;
+	height: 35px;
+	border: none;
+	background-color: #00ff2b;
+	font-family: "lores-21-serif", sans-serif;
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-align: left;
+	padding-left: 15px;
+	color: #0066ff;
+}
+
+.homepageButton{
+	position: absolute;
+	top: 2px;
+	right: 2px;
 	width: 160px;
 	height: 35px;
 	border: none;
