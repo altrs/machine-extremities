@@ -110,33 +110,39 @@ _____________  __.___ _______
 
   <!-- NAVIGATOR -->
   <div class="navigator">
-      <div class="outerBox1">
-    <button class="backButton" onClick="hideNavigator()">BACK</button>
-    <a href="index.html"><button class="homepageButton">HOMEPAGE</button></a>
-        <div class="outerBox2">
-          <div class="outerBox3">
+    <div class="outerBox1">
+      <button class="backButton" onClick="backToHomePage()">BACK</button>
+          <a href="index.html"><button class="homepageButton">HOMEPAGE</button></a>
+      <div class="outerBox2">
+        <div class="outerBox3">
 
-            <a href="eyes.html"><div class="navigatorButton" id="eyesNavigator">
-              <div class="navigatorGif"><img src="assets/eyes.gif"/></div>
-            </div></a>
+          <a href="eyes.html"><div class="navigatorButton" id="eyesNavigator">
+            <div class="navigatorGif"><img src="assets/eyes.gif"/></div>
+          </div></a>
 
-            <a href="hands.html"><div class="navigatorButton" id="handsNavigator">
-              <div class="navigatorGif"><img src="assets/hands.gif"/></div>
-            </div></a>
+          <img id="eyeC" style="position: absolute; display: none;z-index: 1000; width: 450px; left: -200px; border: 1px dotted black;" src="assets/eyes/eyes-chart.png">
 
-            <a href="charts.html"><div class="navigatorButton" id="heartNavigator">
-              <div class="navigatorGif"><img src="assets/chart.gif"/></div>
-            </div></a>
+          <a href="hands.html"><div class="navigatorButton" id="handsNavigator">
+            <div class="navigatorGif"><img src="assets/hands.gif"/></div>
+          </div></a>
 
-            <a href="skin.html"><div class="navigatorButton" id="skinNavigator">
-              <div class="navigatorGif"><img src="assets/skin.gif"/></div>
-            </div></a>
-            
-          </div>
+          <img id="handC" style="position: absolute; display: none;z-index: 1000; width: 400px; left: 550px; top: 300px; border: 1px dotted black;" src="assets/hands/hands-chart.png">
+
+          <a href="charts.html"><div class="navigatorButton hover-area" id="heartNavigator">
+            <div class="navigatorGif"><img src="assets/chart.gif"/></div>
+          </div></a>
+
+          <a href="skin.html"><div class="navigatorButton" id="skinNavigator">
+            <div class="navigatorGif"><img src="assets/skin.gif"/></div>
+          </div></a>
+
+          <img id="skinC" style="position: absolute; display: none;z-index: 1000; width: 350px; left: -200px; top: 200px; border: 1px dotted black;" src="assets/skin/skinchart.png">
+          
         </div>
-      <a href="credits.html"><button class="creditsButton">CREDITS</button></a>
       </div>
+      <a href="credits.html"><button class="creditsButton">CREDITS</button></a>
     </div>
+  </div>
 
   <script src="imgHovers.js"></script>  
   <script src="script.js"></script>

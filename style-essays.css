@@ -123,12 +123,11 @@ img{
 .studies {
 	width: 360px;
   position: relative;
-  margin-left: -290px; /* overlap horizontally */
+  margin-left: -290px;
   transition: transform 0.1s linear, z-index 0s;
   z-index: 1;
 }
 
-/* Position each image slightly lower */
 .studies:nth-child(1) {
   top: 0;
 }
@@ -141,12 +140,10 @@ img{
   top: 200px;
 }
 
-/* Remove left margin for the first one */
 .studies:first-child {
   margin-left: 0;
 }
 
-/* Hover effect: bring to front and enlarge */
 .studies:hover {
   transform: scale(1.2);
   z-index: 10;
@@ -155,18 +152,32 @@ img{
 
 #artcilesDiv {
   display: grid;
-  grid-template-columns: repeat(2, auto); /* Shrink-wrap columns to content */
-  gap: 10px 8px; /* row gap, column gap */
-  justify-content: center; /* center the grid as a whole */
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 8px;
+  justify-content: center;
   align-items: center;
 }
 
 .articles {
-  width: 260px;        /* your desired size */
+  width: 260px;
   height: 200px;
   object-fit: cover;
   display: block;
   padding: 10px;
 }
 
+
+.circle-text {
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    z-index: 9999;
+  }
+
+  .circle-text span {
+    position: absolute;
+    transform-origin: 0 50%;
+    white-space: pre;
+  }
 

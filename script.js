@@ -1,10 +1,3 @@
-// button text moving from left to right
-// highlightable links in writing
-// loading at the bottom that is of a head moving away from it's body
-// 'type: what's this about?' or 'i want to grow' --> and then it turns into a button
-// E gets long on hover of title?
-// metaballs: https://editor.p5js.org/amandarito/sketches/_tT1S4LGN
-
 let characterTracker = 0;
 let currentText = "";
 let deletionSpeed = 7;
@@ -49,7 +42,6 @@ function lineAppearing() {
     }, index * lineAppearingSpeed);
   });
 
-  // After boot lines are displayed, type intro1 then show chart
   setTimeout(() => {
     startTyping(intro1, showChart);
   }, boot.length * lineAppearingSpeed + 1000);
@@ -60,8 +52,6 @@ function startTyping(text, callback) {
   currentText = text;
   characterTracker = 0;
   typeWriter(callback);
-
-  // Removed intro2 logic
 }
 
 function typeWriter(callback) {
@@ -148,5 +138,73 @@ document.addEventListener('mouseup', function(event) {
 document.getElementById("eyesNavigator").addEventListener('mouseenter', () => {document.getElementById("eyeC").style.display = "block";});
 document.getElementById("eyesNavigator").addEventListener('mouseleave', () => {document.getElementById("eyeC").style.display = "none";});
 
+document.getElementById("handsNavigator").addEventListener('mouseenter', () => {document.getElementById("handC").style.display = "block";});
+document.getElementById("handsNavigator").addEventListener('mouseleave', () => {document.getElementById("handC").style.display = "none";});
 
+document.getElementById("skinNavigator").addEventListener('mouseenter', () => {document.getElementById("skinC").style.display = "block";});
+document.getElementById("skinNavigator").addEventListener('mouseleave', () => {document.getElementById("skinC").style.display = "none";});
+
+ const hoverArea = document.getElementById('heartNavigator');
+  const text = "CHARTS OF HUMILITY ";
+  const radius = 60;
+  let circleContainer;
+  let animationFrameId;
+  let angleOffset = 0;
+  let mouseX = 0;
+  let mouseY = 0;
+
+  function animate() {
+    if (!circleContainer) return;
+
+    const chars = circleContainer.querySelectorAll('span');
+    const numChars = chars.length;
+
+    for (let i = 0; i < numChars; i++) {
+      const angle = ((i / numChars) * 2 * Math.PI) + angleOffset;
+
+      const x = radius * Math.cos(angle);
+      const y = radius * Math.sin(angle);
+      const deg = angle * (180 / Math.PI) + 90;
+
+      const char = chars[i];
+      char.style.fontFamily = 'lores-21-serif';
+      char.style.left = `${x}px`;
+      char.style.top = `${y}px`;
+      char.style.transform = `rotate(${deg}deg)`;
+    }
+
+    angleOffset += 0.02;
+    circleContainer.style.left = `${mouseX}px`;
+    circleContainer.style.top = `${mouseY}px`;
+
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  hoverArea.addEventListener('mouseenter', () => {
+    circleContainer = document.createElement('div');
+    circleContainer.classList.add('circle-text');
+
+    for (let i = 0; i < text.length; i++) {
+      const char = document.createElement('span');
+      char.innerText = text[i];
+      circleContainer.appendChild(char);
+    }
+
+    document.body.appendChild(circleContainer);
+    animate();
+  });
+
+  hoverArea.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  hoverArea.addEventListener('mouseleave', () => {
+    if (circleContainer) {
+      circleContainer.remove();
+      circleContainer = null;
+    }
+    cancelAnimationFrame(animationFrameId);
+    angleOffset = 0;
+  });
 

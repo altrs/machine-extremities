@@ -397,8 +397,19 @@ a:hover{
 	filter: invert(0%);
 }
 
+.circle-text {
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    z-index: 9999;
+  }
 
-
+  .circle-text span {
+    position: absolute;
+    transform-origin: 0 50%;
+    white-space: pre;
+  }
 
 
 
