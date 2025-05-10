@@ -5,6 +5,8 @@ images.forEach(img => {
   img.addEventListener('mouseenter', () => {
     console.log('Hovered image ID:', img.id);
 
+    //EYES ----------
+
     if (img.id === 'bigBrother') {
       highlightAllLetters("bigBrotherQ", "#ffe642", "#53455e");
     }
@@ -39,6 +41,46 @@ images.forEach(img => {
       highlightAllLetters("self-controlQ", "#2a5459", "#c5dbcd");
     }
 
+    //HANDS ----------
+    else if (img.id === 'skinSweat') {
+      highlightAllLetters("skinSweatQ", "#c5eef0", "1a2f30");
+    }
+    else if (img.id === 'homunculusQ') {
+      highlightAllLetters("homunculusQ", "#2a5459", "#c5dbcd");
+    }
+    else if (img.id === 'cyborgSelfQ') {
+      highlightAllLetters("cyborgSelfQ", "#b84132", "#ede7b4");
+    }
+    else if (img.id === 'daisyQ') {
+      highlightAllLetters("daisyQ", "#d6a698", "#3a389c");
+    }
+    else if (img.id === 'arkQ') {
+      highlightAllLetters("arkQ", "#2a5459", "#c5dbcd");
+    }
+    else if (img.id === 'dateQ') {
+      highlightAllLetters("dateQ", "#a4cc8d", "#363b33");
+    }
+    else if (img.id === 'promptsQ') {
+      highlightAllLetters("promptsQ", "#c1ddf7", "#67356e");
+    }
+    else if (img.id === 'commentQ') {
+      highlightAllLetters("commentQ", "#2a5459", "#c5dbcd");
+    }
+    else if (img.id === 'motionPicQ') {
+      highlightAllLetters("motionPicQ", "#beccc6", "#1b1a2b");
+    }
+    else if (img.id === 'workerQ') {
+      highlightAllLetters("workerQ", "#d6a698", "#3a389c");
+    }
+    else if (img.id === 'requiemQ') {
+      highlightAllLetters("requiemQ", "#522659", "#e3d5b3");
+    }
+    else if (img.id === 'copyQ') {
+      highlightAllLetters("copyQ", "#c1ddf7", "#67356e");
+    }
+
+
+
   });
 
   img.addEventListener('mouseleave', () => {
@@ -46,8 +88,6 @@ images.forEach(img => {
     resetAllHighlights();
   });
 });
-
-
 
 
 function highlightAllLetters(className, highlightColor, bgColor) {
