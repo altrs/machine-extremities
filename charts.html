@@ -58,6 +58,41 @@
 			z-index: 999;
 		}
 
+		#checkbox-list{
+			position: relative;
+			left: -5%;
+			width: 40%;
+			color: #27524F;
+			border: 1px dotted black;
+			padding: 15px;
+			background-image: url('assets/charts/checklist-background.png');
+		}
+
+		#side-by-side-charts{
+			display: flex;
+			margin-bottom: 100px;
+		}
+
+		 #checkbox-list label {
+		    display: flex;
+		    align-items: flex-start;
+		    gap: 1px;
+		    margin-bottom: 1px;
+		    color: #27524F;
+		  }
+
+		  #checkbox-list input[type="checkbox"] {
+		    margin-top: 3px;
+		    margin-right: 5px;
+		    flex-shrink: 0;
+
+		  }
+
+		  #checkbox-list span {
+		    flex-grow: 1;
+		    min-width: 0; /* ensures wrapping works properly */
+		  }
+
 	</style>
 </head>
 <body>
@@ -66,16 +101,42 @@
 	    <button class="essayBackButton" onClick="loadNavigator()">NAVIGATOR</button>
 	  </div>
 
-	<div id="charts">
-	  <img src="assets/charts/new/humility.png" style="left: 50px;" class="tab" />
-	  <img src="assets/charts/new/cyborg.png" style="left: 50px; top: 600px" class="tab" />
-	  <img src="assets/charts/new/checklist.png" style="left:63vw; top: 60px" class="tab" />
-	  <img src="assets/charts/new/hitech.png" style="left: 500px; top: 900px;" class="tab" />
-	  <img src="assets/charts/new/shame.png" style="left: 630px; top: 30px" class="tab" />
+	  <div id="side-by-side-charts">
 
-	  <img src="assets/eyes/eyes-chart.png" style="left: 100px; top: 300px" class="tab" />
-	  <img src="assets/hands/hands-chart.png" style="left: 500px; top: 70vh" class="tab" />
-	  <img src="assets/skin/skinchart.png" style="width: 300px; left: 1050px; top: 110vh" class="tab" />
+	  	<div id="charts">
+		  <img src="assets/charts/new/humility.png" style="left: 50px;" class="tab" />
+		  <img src="assets/charts/new/cyborg.png" style="width: 350px;left: 50px; top: 450px" class="tab" />
+		  <img src="assets/charts/new/hitech.png" style="left: 500px; top: 900px;" class="tab" />
+		  <img src="assets/charts/new/shame.png" style="left: 630px; top: 30px" class="tab" />
+		  <img src="assets/eyes/eyes-chart.png" style="left: 100px; top: 300px" class="tab" />
+		  <img src="assets/hands/hands-chart.png" style="left: 500px; top: 70vh" class="tab" />
+		  <img src="assets/skin/skinchart.png" style="width: 300px; left: 1050px; top: 110vh" class="tab" />
+		</div>
+
+		  <div id="checkbox-list">
+			  <h3 style="text-align: center;">Humility Based Design Checklist</h3>
+			  <label><input type="checkbox" name="tasks" value="task1"><span> Realistic solutions based on both projected and perceived benefits and consequences of a product</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task2"><span> Focused on disconnecting from hi-technologies and the systems that support them when possible</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task3"><span> Acknowledgment that ‘low’ tech can be just as valuable as hi-tech </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Self/product indifferent innovation</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Readily acknowledging imperfections and mistakes </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Uplifting communities that are outside of a product’s consumer-base, especially if those communities are affected or involved in the production of a product/system </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Finding value in smaller scale solutions</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Scaling at the speed of trust </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Scaling based upon manageability of mission goals</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Dethroning efficiency and instead focusing on specific and well defined goals </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Self/product indifferent innovation
+				</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Acknowledgement that a product is not limitless</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> A product that thinks highly of its users and holds them to high standards </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Products that are actively listening and empathetic to consumer needs</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Products that openly acknowledge the social and economic systems it operates under and/or reinforces</span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Products that have evolvable mindset </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Products that design slow for long term </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Products that do not rely upon trend </span></label><br>
+				<label><input type="checkbox" name="tasks" value="task4"><span> Firms that emphasize complete transparency </span></label><br><br>
+				<p>This list is simultaneously non-exhaustive and contextual. If you are someone who intends to either create or engage with humility-based technology, utilize this list and supplementary information below to assess a given product, and whether or not it checks off enough boxes for you, or if it checks off the boxes that matter the most to you.</p>
+			</div>
 
 	</div>
 
@@ -105,7 +166,7 @@
             
           </div>
         </div>
-        <button class="creditsButton">CREDITS</button>
+      <a href="credits.html"><button class="creditsButton">CREDITS</button></a>
       </div>
     </div>
 
@@ -141,6 +202,7 @@
       document.removeEventListener('mousemove', onMouseMove);
     }, { once: true });
   }
+
 function backToHomePage(){
 	console.log("back button");
 	document.querySelector(".navigator").style.display = "none";

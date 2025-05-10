@@ -49,6 +49,20 @@ p{
 	margin: 0px;
 }
 
+a{
+	text-decoration: none;
+	color: black;
+	background-color: #fff9d9;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.imgA{
+	background-color: transparent;
+}
+
 .centering-container{
 	width: 90%;
 	height: 80vh;
@@ -120,13 +134,13 @@ p{
 
 #LC2{
 	margin-top: 20px;
-	width: 75%;
+	width: 80%;
 	border-radius: 200px;
-	padding: 7px 10px;
+	padding: 10px 17px;
 	border: 1px solid black;
 	text-align: center;
 	position: relative;
-	left: 20%;
+	left: 12%;
 }
 
 .squareDivider{

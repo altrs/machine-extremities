@@ -28,10 +28,10 @@ let intro1 = `I did think,
               let's go about this slowly.
               This is important. This should take
               some really deep thought.
+              We should take small thoughtful steps.
 
-              We should take small thoughtful steps.`;
-
-let intro2 = `But, bless us, we didn't
+              
+              But, bless us, we didn't.
 
 
               [Mary Oliver]`;
@@ -49,14 +49,12 @@ function lineAppearing() {
     }, index * lineAppearingSpeed);
   });
 
+  // After boot lines are displayed, type intro1 then show chart
   setTimeout(() => {
-  startTyping(intro1, () => {
-    deleteText(() => {
-      startTyping(intro2, showChart); // after deletion, type intro2, then show logic chain
-    });
-  });
-}, boot.length * lineAppearingSpeed + 1000);
+    startTyping(intro1, showChart);
+  }, boot.length * lineAppearingSpeed + 1000);
 }
+
 
 function startTyping(text, callback) {
   currentText = text;
@@ -112,6 +110,11 @@ function backToHomePage(){
 	document.querySelector(".navigator").style.display = "none";
 }
 
+function hideNavigator(){
+  document.querySelector(".navigator").style.display = "none";
+  document.getElementById("loading").style.display = "none";
+}
+
 function showLoading(){
 	console.log("CLICKED!");
 	document.getElementById('loading').style.display = "block";
@@ -138,6 +141,12 @@ document.addEventListener('mouseup', function(event) {
 	logicChainDisplayTime = 100;
 	loadNavigatorTime = 5000;
 });
+
+
+// ------------------- 
+
+document.getElementById("eyesNavigator").addEventListener('mouseenter', () => {document.getElementById("eyeC").style.display = "block";});
+document.getElementById("eyesNavigator").addEventListener('mouseleave', () => {document.getElementById("eyeC").style.display = "none";});
 
 
 
