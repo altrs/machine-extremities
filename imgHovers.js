@@ -79,6 +79,36 @@ images.forEach(img => {
       highlightAllLetters("copyQ", "#c1ddf7", "#67356e");
     }
 
+    //SKIN -----------
+
+    else if (img.id === 'karmaQ') {
+      highlightAllLetters("karmaQ", "#2e414a", "#d6976f");
+    }
+    else if (img.id === 'dataCenterQ') {
+      highlightAllLetters("dataCenterQ", "#d6a698", "#3a389c");
+    }
+    else if (img.id === 'arcadeQ') {
+      highlightAllLetters("arcadeQ", "#a5d1c8", "#8c663c");
+    }
+    else if (img.id === 'lithium') {
+      highlightAllLetters("lithium", "#beccc6", "#1b1a2b");
+    }
+    else if (img.id === 'treeQ') {
+      highlightAllLetters("treeQ", "#b84132", "#ede7b4");
+    }
+    else if (img.id === 'carQ') {
+      highlightAllLetters("carQ", "#522659", "#e3d5b3");
+    }
+    else if (img.id === 'theHeartQ') {
+      highlightAllLetters("theHeartQ", "#c5eef0", "1a2f30");
+    }
+    else if (img.id === 'corruptionQ') {
+      highlightAllLetters("corruptionQ", "#2a5459", "#c5dbcd");
+    }
+    else if (img.id === 'houseQ') {
+      highlightAllLetters("houseQ", "#2a5459", "#c5dbcd");
+    }
+
 
 
   });
