@@ -3,16 +3,31 @@
 <head>
   <title>MACHINE EXTREMITIES</title>
   <style>
+    @font-face {
+      font-family: IBM_EGA;
+      src: url("assets/fonts/IBM_EGA_9x14.woff");
+    }
     body{
+      font-family: IBM_EGA;
+      color: white;
       margin: 0;
     }
   </style>
 </head>
 <body>
 
-  <div style="display: flex; justify-content: center; align-content: center; align-items: center; background-color:#8495A4; widows: 100vw; height: 100vh;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; background-color:#8495A4; widows: 100vw; height: 100vh;">
+    <p style="position: relative; top: 200px; z-index: 999">CLICK TO ENTER</p>
     <img style="width: 600px;height: 400px;  clip-path: inset(0px 0px 5px 0px);" src="assets/enter-loading.gif"/>
   </div>
+
+  <script>
+    
+      document.addEventListener('click', function () {
+        window.location.href = 'home.html';
+      });
+
+  </script>
 
 </body>
 </html>
