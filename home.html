@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MACHINE EXTREMITIES</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="introPage">
+
+		<div class="centering-container">
+
+			<div class="title-poem">
+				<h1>MACHINE EXTREMITIES</h1>
+				<div>
+					<span id="intro-boot"></span>
+					<span id="intro"></span><span id="cursor">/</span>
+				</div>
+			</div>
+
+			<div class="title-chart">
+
+				<div class="squareChartItem" id="LC1">
+					<div><p class="itemTitle">1</p></div>
+					<div><p class="chartText">Just as our desire for innovation stems from a place of growth, so too does it stem from a place of dissatisfaction with our current capabilities: Our technologies often encapsulate and expose the very dissatisfactions we are attempting to leave behind.</p></div>
+				</div>
+
+				<div id="LC2">
+					<p>These dissatisfactions can often reflect specific feelings of shame we have within ourselves. While shame is not necessarily negative, it is a reactionary emotion that, if left unchecked, can become dangerous. Inadequacy highly-steeped in shame creates untethered dissatisfaction.</p>
+				</div>
+
+				<div class="squareDivider">
+					<div id="LC3"><p class="itemTitle" style="color: white; background-color: black">3</p><p class="chartText">Untethered dissatisfaction can lead to technologies that place ourselves in a never-ending and unrealistic cycle of escaping shameful inadequacy via technological aids.</p></div>
+					<div id="LC4"><p class="itemTitle" style="color: white; background-color: black;">4</p><p class="chartText">In turn, the trajectories of our technology become increasingly controlling, exploitative, neurotic and insidious as both creator and users cope with the cycle of dissatisfaction and shame.</p></div>
+				</div>
+
+				<div class="squareChartItem" id="LC5"><p class="itemTitle">5</p><p class="chartText">By acknowledging the presence of these emotions within our technologies, we can start to better understand why such technologies that set out with good intentions, may turn sour– driving us further and further away from ourselves, our needs, and our initial goals.</p></div>
+				<div class="squareChartItem" id="LC6"><p  class="itemTitle">6</p><p class="chartText" style="color:white; background-color: black;">This web publication suggests a humility-based design innovation framework to compliment and guide our feelings of shame and dissatisfaction, subsequently guiding our technologies and fostering well-rounded innovation.</p></div>
+
+<!-- 				<div class="circleDivider">
+					<div id="LC7"><p class="itemTitle">7</p><p class="chartText">By acknowledging the presence of shame within our technologies, we can start to better understand why technologies that set out with good intentions, may turn sour, driving us further and further away from ourselves and initial goals.</p></div>
+					<div id="LC8"><p class="itemTitle">8</p><p class="chartText">This web publication suggests a humility-based design innovation framework to compliment and guide our feelings of shame, subsequently guiding our technologies and fostering well-rounded innovation.</p></div>
+				</div> -->
+
+				<div class="centering" id="enterDiv">
+					<button id="enterButton" onClick="showLoading();"> INSPECT EXTREMITIES! </button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="loadingDiv">
+		<img id="loading" src="assets/loading2.gif"/>
+	</div>
+
+	<div class="navigator">
+    <div class="outerBox1">
+      <button class="backButton" onClick="backToHomePage()">BACK</button>
+          <a href="index.html"><button class="homepageButton">HOMEPAGE</button></a>
+      <div class="outerBox2">
+        <div class="outerBox3">
+
+          <a href="eyes.html"><div class="navigatorButton" id="eyesNavigator">
+            <div class="navigatorGif"><img src="assets/eyes.gif"/></div>
+          </div></a>
+
+          <img id="eyeC" style="position: absolute; display: none;z-index: 1000; width: 450px; left: -200px; border: 1px dotted black;" src="assets/eyes/eyes-chart.png">
+
+          <a href="hands.html"><div class="navigatorButton" id="handsNavigator">
+            <div class="navigatorGif"><img src="assets/hands.gif"/></div>
+          </div></a>
+
+          <img id="handC" style="position: absolute; display: none;z-index: 1000; width: 400px; left: 550px; top: 300px; border: 1px dotted black;" src="assets/hands/hands-chart.png">
+
+          <a href="charts.html"><div class="navigatorButton hover-area" id="heartNavigator">
+            <div class="navigatorGif"><img src="assets/chart.gif"/></div>
+          </div></a>
+
+          <a href="skin.html"><div class="navigatorButton" id="skinNavigator">
+            <div class="navigatorGif"><img src="assets/skin.gif"/></div>
+          </div></a>
+
+          <img id="skinC" style="position: absolute; display: none;z-index: 1000; width: 350px; left: -200px; top: 200px; border: 1px dotted black;" src="assets/skin/skinchart.png">
+          
+        </div>
+      </div>
+      <a href="credits.html"><button class="creditsButton">CREDITS</button></a>
+    </div>
+  </div>
+
+
+	<script src="script.js"></script>
+</body>
+</html>
