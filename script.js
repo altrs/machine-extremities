@@ -37,7 +37,7 @@ let timeout;
     clearTimeout(timeout);
     timeout = setTimeout(() => {
       window.location.href = 'index.html'; // change this if your index path is different
-    }, 60000); // 60,000 milliseconds = 1 minute
+    }, 120000); // 60,000 milliseconds = 1 minute
   }
 
   // Reset the timer on any mouse movement
